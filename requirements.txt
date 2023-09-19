@@ -1,0 +1,3 @@
+matplotlib==3.1.2
+numpy==1.17.4
+tabulate==0.8.9
