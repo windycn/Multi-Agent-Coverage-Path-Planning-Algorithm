@@ -11,6 +11,10 @@ Transforming the multi-agent problem into a single-agent problem, where each age
 
 Each partitioned map includes one agent, giving rise to multiple partitioning approaches. The quality of the area partitioning algorithm can be categorized as basic, intermediate, or advanced. Ideally, achieving an even distribution of maps for coverage is essential to minimize the overall time. Advanced area partitioning methods consider spatial connectivity and the number of steps in each partition to create more rational divisions.
 
+单机路径规划算法（启发式）Single-Agent Path Planning Algorithm (Heuristic):
+
+![算法原理](https://github.com/windycn/Multi-Agent-Coverage-Path-Planning-Algorithm/blob/main/images/alg.png)
+
 ### 待加算法 Todo List
 
 - [x] 单机路径规划算法（启发式）Single-Agent Path Planning Algorithm (Heuristic)
