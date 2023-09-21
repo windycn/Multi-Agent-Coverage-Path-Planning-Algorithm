@@ -18,6 +18,8 @@ Each partitioned map includes one agent, giving rise to multiple partitioning ap
 - [ ] 初阶区域划分算法 Basic Region Partitioning Algorithm
 
 - [ ] 高阶区域划分算法 Advanced Region Partitioning Algorithm
+      
+- [ ] 转译层（①普通地图与01地图互转；②划分后01地图对应至总图位置坐标转译）Translation layer (1) Common map and 01 map intertransfer; ② After division 01 map corresponds to the general map position coordinate translation)
 
 ### 安装和使用 Installation & Usage
 ```bash
