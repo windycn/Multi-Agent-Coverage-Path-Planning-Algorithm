@@ -31,6 +31,84 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
+
+### 现有函数说明 Existing function specification
+- PathPlanningCore 算法核心层
+- getPath 算法解算层
+```python
+def plan_coverage_path(maps: list, isprint=True, isconsole=True ,test_show_each_result=False) -> list:
+    """
+    覆盖路径规划算法生成函数
+
+    :param maps: (map_name_list) 输入已有的map(npy)格式数据文件名；
+    :param isprint: (默认为True) 是否输出图示；
+    :param isconsole:  (默认为True) 是否控制台打印信息；
+    :param test_show_each_result: (默认为False) 是否显示每个结果的测试标志；
+    :return: best_trajectory_list: 最好的路径列表
+
+    {
+        "map_name": 地图文件名,
+
+        "start_pos": 起始位置,
+
+        "end_pos": 结束位置,
+
+        "start_orientation": 初始方向 ['^', '<', 'v', '>'],
+
+        "start_orientation_code": 初始方向代码 [0, 1, 2, 3],
+
+        "coverage_path_Heuristic": 启发式算法名称（MANHATTAN曼哈顿距离；CHEBYSHEV切比雪夫距离；VERTICAL垂直启发式；HORIZONTAL水平启发式,
+
+        "Path_point_list": 路径点列表 ([row_id, column_id]),
+
+        "Cost": 总代价,
+
+        "Steps": 总步长,
+
+        "policy_map": 策略地图
+    }
+    """
+```
+- mapTools 地图工具
+```python
+def gen_base_map(rows=16, cols=19, obstacle_size=2):
+    '''
+    生成基础的数组地图，可以手动调整障碍后调用map2np生成持久储存使用的npy地图
+
+    :param rows: 行数 (空格为0)
+    :param cols: 列数 (空格为0)
+    :param obstacle_size: 障碍尺寸 (障碍默认2X2大小，为1)
+    :return: grid: 生成的map数组
+    '''
+
+def random_obstacle_map(rows=10, cols=12):
+    '''
+    生成随机障碍地图
+
+    :param rows: 行数 (空格为0)
+    :param cols: 列数 (空格为0)
+    :return: grid: 生成的map数组
+    '''
+
+def randomStartPoint(input_map: list, startpoint=1):
+    '''
+    随机生成起始点 (置为2) 加入到地图中(随机四周放点，四周所有的[0][0]和首行[0]与尾行[-1])
+
+    :param input_map: 输入的地图
+    :param startpoint: 起始点数量，默认为1（一次规划只能规划最开始的起始点），划分后可以进行多个
+    :return: new_map: 含随机起始点的新地图
+    '''
+
+def map2np(maps: list, map_name_list: list):
+    '''
+    将数组地图转换成持久储存使用的npy地图
+
+    :param maps: 地图数据列表 (嵌套数组)
+    :param map_name_list: 地图名字列表 (也是保存的文件名maps/map_name.npy)
+    :return: None
+    '''
+```
+
 ### 效果展示 Results
 基础地图[Base_map]  
 ![Base_map](https://github.com/windycn/Multi-Agent-Coverage-Path-Planning-Algorithm/blob/main/images/Base_map.png)
