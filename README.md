@@ -47,7 +47,3 @@ python main.py
 
 划分区域3[Cover3]  
 ![Cover3](https://github.com/windycn/Multi-Agent-Coverage-Path-Planning-Algorithm/blob/main/images/Cover3.png)
-
-### 引用和参考 References & Citations
-[GA-TSPCPP](https://github.com/WJTung/GA-TSPCPP)  
-[coverage-path-planning](https://github.com/rodriguesrenato/coverage-path-planning)
